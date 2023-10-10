@@ -28,4 +28,9 @@
 </table>
 
 </body>
+<button style="margin-top: 10px">
+    <a style="text-decoration: none; color: black" href="https://webpersonal-b8bc.onrender.com/home/">
+        Return Home
+    </a>
+</button>
 </html>
