@@ -56,7 +56,7 @@
 
 <form action="" method="post">
     <input type="hidden" name="action" value="checkout">
-    <input type="submit" value="Checkout">
+    <input class="checkout" type="submit" value="Checkout">
 </form>
 
 </body>

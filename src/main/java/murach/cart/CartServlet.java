@@ -16,16 +16,14 @@ public class CartServlet extends HttpServlet {
 
         ServletContext sc = getServletContext();
 
-        // get current action
         String action = request.getParameter("action");
         if (action == null) {
-            action = "cart";  // default action
+            action = "cart";
         }
 
-        // perform action and set URL to appropriate page
         String url = "/index.jsp";
         if (action.equals("shop")) {
-            url = "/index.jsp";    // the "index" page
+            url = "/index.jsp";
         }
         else if (action.equals("cart")) {
             String productCode = request.getParameter("productCode");
@@ -37,8 +35,6 @@ public class CartServlet extends HttpServlet {
                 cart = new Cart();
             }
 
-            //if the user enters a negative or invalid quantity,
-            //the quantity is automatically reset to 1.
             int quantity;
             try {
                 quantity = Integer.parseInt(quantityString);
