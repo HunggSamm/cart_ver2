@@ -1,4 +1,12 @@
-8601|86 (the band) - True Life Songs and Pictures|14.95
-pf01|Paddlefoot - The first CD|12.95
-pf02|Paddlefoot - The second CD|14.95
-jr01|Joe Rut - Genuine Wood Grained Finish|14.95
+images/ipad.jpg|1|Apple iPad|14.95
+images/headphone.jpg|2|Sony Headphone|12.95
+images/macbook.jpg|3|Macbook Air|14.95
+images/nikon.jpg|4|Nikon DSLR|14.95
+images/playtasion.jpg|5|Sony Play Stations|14.95
+images/macbro.jpg|6|Macbook Pro|12.95
+images/bosespeaker.jpg|7|Bose Speaker|14.95
+images/galaxy.jpg|8|Samsung Galaxy|14.95
+images/iphone.jpg|9|Apple iPhone|14.95
+images/canon.jpg|10|Canon DSLR|12.95
+images/pixel.jpg|11|Google Pixel|14.95
+images/watch.jpg|12|Apple Watch|14.95

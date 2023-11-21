@@ -4,7 +4,9 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.util.ArrayList;
+import java.util.List;
 
+import murach.business.LineItem;
 import murach.data.ProductIO;
 import murach.business.Product;
 
@@ -18,10 +20,10 @@ public class ProductsServlet extends HttpServlet {
         String path = getServletContext().getRealPath("/WEB-INF/products.txt");
         ArrayList<Product> products = ProductIO.getProducts(path);
         session.setAttribute("products", products);
-
         String url = "/index.jsp";
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
     }
+
 }

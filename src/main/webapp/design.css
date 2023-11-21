@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    margin-left: 2em;
+    margin-right: 2em;
+    color: black;
+}
+
+h1 {
+    font-size: 160%;
+    color: #7ac400;
+    margin-bottom: .5em;
+}
+br {
+    clear: both;
+}
+
+#quantity {
+    width: 2em;
+}
+
+.top{
+    background-color:#7ac400;
+    color: white;
+}
+table {
+    border: 1px solid #7ac400;
+    border-collapse: collapse;
+    width: 50em;
+
+}
+th, td {
+    border: 1px solid #7ac400;
+    text-align: left;
+    padding: .5em;
+}
+.right {
+    text-align: right;
+}
+.checkout{
+    margin-top: 10px;
+}
+input{
+    border-radius: 10px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid #7ac400;
+    cursor: pointer;
+}
+input:hover{
+    background-color: #7ac400;
+    color: white;
+}
+.input{
+    cursor: text;
+    text-align: center;
+    height: 26px;
+}
+.input:hover{
+    background-color: white;
+    color: black;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+td,th{
+    text-align: center;
+}

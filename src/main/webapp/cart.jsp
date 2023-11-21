@@ -3,14 +3,15 @@
 <head>
     <meta charset="utf-8">
     <title>Murach's Java Servlets and JSP</title>
-    <link rel="stylesheet" href="styles/main.css" type="text/css"/>
+    <link rel="stylesheet" href="design.css" type="text/css"/>
 </head>
 <body>
-
+<div class="mainTable" style="margin-left: 325px">
 <h1>Your cart</h1>
 
 <table>
-    <tr>
+    <tr class="top">
+        <th>Image</th>
         <th>Quantity</th>
         <th>Description</th>
         <th>Price</th>
@@ -22,15 +23,18 @@
     <c:forEach var="item" items="${cart.items}">
         <tr>
             <td>
+                <img style="height: 50px" src="${item.product.url}">
+            </td>
+            <td><c:out value='${item.product.description}'/></td>
+            <td>
                 <form action="" method="post">
                     <input type="hidden" name="productCode"
                            value="<c:out value='${item.product.code}'/>">
-                    <input type=text name="quantity"
+                    <input class="input" type=text name="quantity"
                            value="<c:out value='${item.quantity}'/>" id="quantity">
                     <input type="submit" value="Update">
                 </form>
             </td>
-            <td><c:out value='${item.product.description}'/></td>
             <td>${item.product.priceCurrencyFormat}</td>
             <td>${item.totalCurrencyFormat}</td>
             <td>
@@ -58,6 +62,6 @@
     <input type="hidden" name="action" value="checkout">
     <input class="checkout" type="submit" value="Checkout">
 </form>
-
+</div>
 </body>
 </html>

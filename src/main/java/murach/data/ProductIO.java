@@ -7,21 +7,23 @@ import murach.business.*;
 
 public class ProductIO {
 
-    public static Product getProduct(String code, String filepath) {
+    public static Product getProduct(String code, String filepath)
+    {
         try {
             File file = new File(filepath);
-            BufferedReader in
-                    = new BufferedReader(
-                    new FileReader(file));
-
+            BufferedReader in = new BufferedReader(new FileReader(file));
             String line = in.readLine();
-            while (line != null) {
+            while (line != null)
+            {
                 StringTokenizer t = new StringTokenizer(line, "|");
+                String url= t.nextToken();
                 String productCode = t.nextToken();
-                if (code.equalsIgnoreCase(productCode)) {
+                if (code.equalsIgnoreCase(productCode))
+                {
                     String description = t.nextToken();
                     double price = Double.parseDouble(t.nextToken());
                     Product p = new Product();
+                    p.setUrl(url);
                     p.setCode(code);
                     p.setDescription(description);
                     p.setPrice(price);
@@ -38,22 +40,23 @@ public class ProductIO {
         }
     }
 
-    public static ArrayList<Product> getProducts(String filepath) {
+    public static ArrayList<Product> getProducts(String filepath)
+    {
         ArrayList<Product> products = new ArrayList<Product>();
         File file = new File(filepath);
         try {
-            BufferedReader in
-                    = new BufferedReader(
-                    new FileReader(file));
-
+            BufferedReader in = new BufferedReader(new FileReader(file));
             String line = in.readLine();
-            while (line != null) {
+            while (line != null)
+            {
                 StringTokenizer t = new StringTokenizer(line, "|");
+                String url = t.nextToken();
                 String code = t.nextToken();
                 String description = t.nextToken();
                 String priceAsString = t.nextToken();
                 double price = Double.parseDouble(priceAsString);
                 Product p = new Product();
+                p.setUrl(url);
                 p.setCode(code);
                 p.setDescription(description);
                 p.setPrice(price);

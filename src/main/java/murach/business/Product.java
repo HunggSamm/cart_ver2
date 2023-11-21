@@ -2,19 +2,30 @@ package murach.business;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
+import java.util.List;
 
 public class Product implements Serializable {
 
     private String code;
     private String description;
     private double price;
+    private boolean found;
 
+
+    private String url;
     public Product() {
         code = "";
         description = "";
         price = 0;
+        url="";
+    }
+    public String getUrl() {
+        return url;
     }
 
+    public void setUrl(String url) {
+        this.url = url;
+    }
     public void setCode(String code) {
         this.code = code;
     }
@@ -43,4 +54,5 @@ public class Product implements Serializable {
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         return currency.format(price);
     }
+
 }
